@@ -7,7 +7,7 @@ resource "helm_release" "this" {
   version             = var.helm_chart_version
   repository          = var.helm_repo_url
   repository_username = var.helm_repo_username
-  repository_password = var.helm_repo_password  
+  repository_password = var.helm_repo_password
   wait                = var.helm_wait
   timeout             = var.helm_timeout
   cleanup_on_fail     = var.helm_cleanup_on_fail
@@ -37,10 +37,10 @@ resource "helm_release" "self_managed" {
   repository_username = var.helm_repo_username
   repository_password = var.helm_repo_password
 
-  wait             = var.helm_wait
-  timeout          = var.helm_timeout
-  cleanup_on_fail  = var.helm_cleanup_on_fail
-  atomic           = var.helm_atomic
+  wait            = var.helm_wait
+  timeout         = var.helm_timeout
+  cleanup_on_fail = var.helm_cleanup_on_fail
+  atomic          = var.helm_atomic
 
   values = [
     var.values
